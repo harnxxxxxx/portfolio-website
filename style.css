@@ -1,79 +1,49 @@
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+/* style.css */
+:root{
+  --bg: #ffffff;
+  --card: #f5f5f5;
+  --muted: #555555;
+  --text: #000000;
+  --brand: #5b8aff;
+  --brand-2: #22d3ee;
+  --ring: rgba(91,138,255,.45);
 }
-
-body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  line-height: 1.6;
-  background-color: #f4f4f4;
-  color: #333;
-  padding: 20px;
+body{
+  margin:0; font-family: Arial, sans-serif;
+  background: var(--bg);
+  color:var(--text);
+  line-height:1.6;
 }
-
-/* Header */
-header {
-  background-color: #2c3e50;
-  color: #fff;
-  text-align: center;
-  padding: 30px 0;
-  margin-bottom: 30px;
+a{color:var(--brand); text-decoration:none}
+a:hover{text-decoration:underline}
+header{
+  background: var(--card);
+  border-bottom: 1px solid #ddd;
+  padding: 1rem;
 }
-
-header h1 {
-  font-size: 2.5em;
-  margin-bottom: 10px;
+.nav{max-width:1100px; margin:auto; display:flex; justify-content:space-between; align-items:center;}
+.cta-wrap{display:flex; gap:.5rem;}
+.btn{
+  background: var(--brand);
+  color:#fff;
+  padding:.5rem 1rem;
+  border-radius:5px;
+  text-decoration:none;
 }
-
-header p {
-  font-size: 1.2em;
-  font-weight: 300;
+.btn.primary{
+  background: linear-gradient(135deg, var(--brand), var(--brand-2));
+  color:#fff;
 }
-
-/* Section Styling */
-section {
-  background-color: #fff;
-  padding: 25px;
-  margin-bottom: 20px;
-  border-radius: 8px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+main{max-width:1100px; margin: 2rem auto; padding:0 1rem;}
+.card{background:var(--card); padding:1rem; border-radius:8px; margin-bottom:1.5rem;}
+.grid{display:grid; grid-template-columns:1fr; gap:1rem;}
+@media(min-width:768px){
+  .grid{grid-template-columns:1fr 1fr;}
 }
+.skills{display:flex; flex-wrap:wrap; gap:.5rem;}
+.pill{display:inline-block; padding:.3rem .6rem; background:#e0e0e0; border-radius:20px; font-size:.85rem;}
+.subtitle{color:var(--muted);}
+.muted{color:var(--muted);}
+.tags{margin-top:.5rem;}
+footer{text-align:center; padding:1rem; color:var(--muted);}
 
-section h2 {
-  color: #2c3e50;
-  margin-bottom: 15px;
-  border-bottom: 2px solid #3498db;
-  padding-bottom: 5px;
-}
-
-ul {
-  list-style: disc;
-  padding-left: 20px;
-}
-
-ul ul {
-  list-style: circle;
-  padding-left: 25px;
-}
-
-/* Links */
-a {
-  color: #3498db;
-  text-decoration: none;
-}
-
-a:hover {
-  text-decoration: underline;
-}
-
-/* Footer */
-footer {
-  text-align: center;
-  margin-top: 30px;
-  padding: 15px;
-  font-size: 0.95em;
-  background-color: #ecf0f1;
-  border-radius: 8px;
-}
